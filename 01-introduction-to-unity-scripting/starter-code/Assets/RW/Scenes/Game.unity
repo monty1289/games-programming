@@ -460,6 +460,36 @@ Transform:
   m_Father: {fileID: 738851496}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &395462200 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3766863229103784266, guid: 726881a9b8c21e74dbb2d4b473c6d16d,
+    type: 3}
+  m_PrefabInstance: {fileID: 671806915}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &395462201 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 3766863229103784270, guid: 726881a9b8c21e74dbb2d4b473c6d16d,
+    type: 3}
+  m_PrefabInstance: {fileID: 671806915}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &395462205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 395462200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69a6de32951718a4aac2a3d62f8e232d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sheepSaved: 0
+  sheepDropped: 0
+  highScoreText: {fileID: 1903910325}
+  highScore: 0
+  sheepDroppedBeforeGameOver: 0
+  sheepSpawner: {fileID: 0}
 --- !u!1 &534669902
 GameObject:
   m_ObjectHideFlags: 0
@@ -597,6 +627,13 @@ MonoBehaviour:
     type: 3}
   haySpawnpoint: {fileID: 1490662842}
   shootInterval: 1
+  modelParent: {fileID: 5233456974663517128}
+  blueModelPrefab: {fileID: 5233456973075758890, guid: 5c5170d876533ae43bc2e4b15c8e6f6e,
+    type: 3}
+  yellowModelPrefab: {fileID: 5917108387044516939, guid: 28d1a170d9eea59478aa66152b57f446,
+    type: 3}
+  redModelPrefab: {fileID: 3278733490917006391, guid: 5162234e78cffba45b0498c4775c0be7,
+    type: 3}
 --- !u!1 &569638847
 GameObject:
   m_ObjectHideFlags: 0
@@ -854,6 +891,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sheepSaved: 0
   sheepDropped: 0
+  highScoreText: {fileID: 0}
+  highScore: 0
   sheepDroppedBeforeGameOver: 3
   sheepSpawner: {fileID: 342149317}
 --- !u!4 &1050572059 stripped
@@ -1258,6 +1297,85 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 60, y: 8, z: 12}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1903910323
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1903910324}
+  - component: {fileID: 1903910326}
+  - component: {fileID: 1903910325}
+  m_Layer: 5
+  m_Name: HighScoreText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1903910324
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1903910323}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 395462201}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 101.9, y: -51.410004}
+  m_SizeDelta: {x: 229.5, y: 49.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1903910325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1903910323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 32
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'High Score: 20'
+--- !u!222 &1903910326
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1903910323}
+  m_CullTransparentMesh: 1
 --- !u!1 &1991916513 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3766863230289970331, guid: 726881a9b8c21e74dbb2d4b473c6d16d,
@@ -1534,6 +1652,12 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 7871421659521400377, guid: c91d458c12526534eb19d65378204353, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c91d458c12526534eb19d65378204353, type: 3}
+--- !u!4 &5233456974663517128 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4397208863869895446, guid: c91d458c12526534eb19d65378204353,
+    type: 3}
+  m_PrefabInstance: {fileID: 5233456974663517127}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5282911218545726514 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5282911218545726514, guid: fca26d3bba1898f4396e3c3a760c289e,

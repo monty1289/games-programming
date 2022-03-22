@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class GameStateManager : MonoBehaviour
@@ -12,14 +13,22 @@ public class GameStateManager : MonoBehaviour
 
     [HideInInspector]
     public int sheepDropped;
+    public Text highScoreText;
+    public int highScore = 0;
 
     public int sheepDroppedBeforeGameOver;
     public SheepSpawner sheepSpawner;
 
-    // Start is called before the first frame update
     void Awake()
     {
-        Instance = this;
+        Instance = this;                 
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        highScore = PlayerPrefs.GetInt("highscore", 0);
+        highScoreText.text = "HIGHSCORE: " + highScore.ToString();
     }
 
     // Update is called once per frame
@@ -35,6 +44,13 @@ public class GameStateManager : MonoBehaviour
     {
         sheepSaved++;
         UIManager.Instance.UpdateSheepSaved();
+
+        if(highScore < sheepSaved)
+        {
+        PlayerPrefs.SetInt("highscore", sheepSaved);
+
+        }
+
     }
 
     private void GameOver()
