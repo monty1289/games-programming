@@ -252,8 +252,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08327607d64a03e48b14c40f54f16241, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rows: 13
-  cols: 27
+  rows: 20
+  cols: 20
 --- !u!114 &529368644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -266,10 +266,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51e1bdcca82243c499fa5e6e21ae9c9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  showDebug: 0
-  mazeMat1: {fileID: 0}
-  mazeMat2: {fileID: 0}
-  treasureMat: {fileID: 0}
+  showDebug: 1
+  mazeMat1: {fileID: 2100000, guid: ee1783965edfa174f8339d26768f43c2, type: 2}
+  mazeMat2: {fileID: 2100000, guid: 545a9273b54400a4799bbd2fa83df569, type: 2}
+  treasureMat: {fileID: 2100000, guid: ad3f0fbfa96bd414c8f698354958e49d, type: 2}
+  placementThreshold: 0.1
 --- !u!4 &529368645
 Transform:
   m_ObjectHideFlags: 0
