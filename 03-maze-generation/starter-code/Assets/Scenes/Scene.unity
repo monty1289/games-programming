@@ -233,6 +233,7 @@ GameObject:
   - component: {fileID: 529368645}
   - component: {fileID: 529368644}
   - component: {fileID: 529368643}
+  - component: {fileID: 529368646}
   m_Layer: 0
   m_Name: Controller
   m_TagString: Untagged
@@ -252,8 +253,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08327607d64a03e48b14c40f54f16241, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rows: 20
-  cols: 20
+  rows: 21
+  cols: 21
+  playerPrefab: {fileID: 526753307576256837, guid: 1b1c35e18d1e1bf4fbc2ea65d58e677d, type: 3}
+  monsterPrefab: {fileID: 895211356916686346, guid: d9e8a196695412b4fa390ac17493bbd3, type: 3}
 --- !u!114 &529368644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,6 +288,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &529368646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529368642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 128a96d256127854890d0606676b33c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &974588508
 GameObject:
   m_ObjectHideFlags: 0

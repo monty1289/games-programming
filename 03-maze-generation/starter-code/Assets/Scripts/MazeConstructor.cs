@@ -15,6 +15,12 @@ public class MazeConstructor : MonoBehaviour
         get; private set;
     }
 
+    public float hallWidth{ get; private set; }
+    public int goalRow{ get; private set; }
+    public int goalCol{ get; private set; }
+
+    public Node[,] graph;
+
     void Awake()
     {
         // default to walls surrounding a single empty cell
@@ -25,6 +31,7 @@ public class MazeConstructor : MonoBehaviour
             {1, 1, 1}
         };
         meshGenerator = new MazeMeshGenerator();
+        hallWidth = meshGenerator.width;
         
     }
 
@@ -67,10 +74,22 @@ public class MazeConstructor : MonoBehaviour
     }
     public void GenerateNewMaze(int sizeRows, int sizeCols)
     {
+        DisposeOldMaze();  
+        
         if (sizeRows % 2 == 0 && sizeCols % 2 == 0)
             Debug.LogError("Odd numbers work better for dungeon size.");
 
         data = FromDimensions(sizeRows, sizeCols);
+
+        graph = new Node[sizeRows,sizeCols];
+
+        for (int i = 0; i < sizeRows; i++)        
+            for (int j = 0; j < sizeCols; j++)            
+                graph[i, j] = data[i,j] == 0 ? new Node(i, j, true) : new Node(i, j, false);
+
+        goalRow = data.GetUpperBound(0) - 1;
+        goalCol = data.GetUpperBound(1) - 1;
+
         DisplayMaze();
     }
 
@@ -95,5 +114,13 @@ public class MazeConstructor : MonoBehaviour
                 } 
 
         return maze;
+    }
+
+    public void DisposeOldMaze()
+    {
+        GameObject[] objects = GameObject.FindGameObjectsWithTag("Generated");
+        foreach (GameObject go in objects) {
+            Destroy(go);
+        }
     }
 }
