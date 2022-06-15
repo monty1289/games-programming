@@ -26,7 +26,7 @@ public class GameStateManager : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
+    {        
         highScore = PlayerPrefs.GetInt("highscore", 0);
         highScoreText.text = "HIGHSCORE: " + highScore.ToString();
     }

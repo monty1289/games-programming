@@ -11,7 +11,7 @@ public class Wave
 }
 public class SpawnEnemy : MonoBehaviour
 {
-    //public List <GameObject> enemyList;
+    public List <GameObject> enemyList = new List<GameObject>();
     public GameObject[] waypoints;
     public GameObject testEnemyPrefab;
     public Wave[] waves;
@@ -24,7 +24,7 @@ public class SpawnEnemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //enemyList = new List<GameObject>(Resources.LoadAll<GameObject>("Enemys"));
+        enemyList = new List<GameObject>(Resources.LoadAll<GameObject>("Enemys"));
         lastSpawnTime = Time.time;
         gameManager = GameObject.Find("GameManager").GetComponent<GameManagerBehaviour>();
     }
@@ -43,6 +43,7 @@ public class SpawnEnemy : MonoBehaviour
             {
                 lastSpawnTime = Time.time;
                 GameObject newEnemy = (GameObject)Instantiate(waves[currentWave].enemyPrefab);
+                
                 newEnemy.GetComponent<MoveEnemy>().waypoints = waypoints;
                 enemiesSpawned++;
             }

@@ -14,17 +14,23 @@ public class Sheep : MonoBehaviour
     private SheepSpawner sheepSpawner;
     public float heartOffset;
     public GameObject heartPrefab;
+    
     // Start is called before the first frame update
     void Start()
     {
         myCollider = GetComponent<Collider>();
         myRigidbody = GetComponent<Rigidbody>();
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.forward * runSpeed * Time.deltaTime);
+        
+        runSpeed += 0.5f * Time.deltaTime;
+
+        transform.Translate(Vector3.forward * runSpeed * Time.deltaTime);       
+        
     }
 
     private void HitByHay()

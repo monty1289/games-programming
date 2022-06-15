@@ -42,6 +42,11 @@ public class SheepSpawner : MonoBehaviour
         while (canSpawn)
         {
             SpawnSheep();
+
+            if(timeBetweenSpawns > 1){
+            timeBetweenSpawns -= 10f * Time.deltaTime;
+
+            }
             yield return new WaitForSeconds(timeBetweenSpawns);
         }
     }
