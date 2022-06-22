@@ -16,7 +16,7 @@ public class Move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {        
-        transform.Translate(movementSpeed * Time.deltaTime, space);
+        transform.Translate(movementSpeed * Time.deltaTime, space); //sets the speed of hay when shot
     }
 
     

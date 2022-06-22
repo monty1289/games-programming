@@ -29,7 +29,7 @@ public class GameController : MonoBehaviour
         aIController.StartAI();
         
     }
-
+    //creates player from playerPrefab and sets starting position
     private GameObject CreatePlayer()
     {
         Vector3 playerStartPosition = new Vector3(constructor.hallWidth, 1, constructor.hallWidth);  
@@ -38,7 +38,7 @@ public class GameController : MonoBehaviour
 
         return player;
     }
-
+    //creates monster from playerPrefab and sets starting position
     private GameObject CreateMonster()
     {
         Vector3 monsterPosition = new Vector3(constructor.goalCol * constructor.hallWidth, 0f, constructor.goalRow * constructor.hallWidth);
@@ -47,7 +47,7 @@ public class GameController : MonoBehaviour
 
         return monster; 
     }
-
+    //triggers when player reaches the gold box and stops AI
     private void OnTreasureTrigger(GameObject trigger, GameObject other)
     { 
         Debug.Log("You Won!");

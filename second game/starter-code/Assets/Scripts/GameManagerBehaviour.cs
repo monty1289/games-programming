@@ -13,7 +13,7 @@ public class GameManagerBehaviour : MonoBehaviour
         set
         {
             gold = value;
-            goldLabel.GetComponent<Text>().text = "GOLD: " + gold;
+            goldLabel.GetComponent<Text>().text = "GOLD: " + gold;  //shows the amount of gold player has
         }
     
     }
@@ -21,7 +21,6 @@ public class GameManagerBehaviour : MonoBehaviour
     public Text waveLabel;
     public GameObject[] nextWaveLabels;
     public bool gameOver = false;
-
     private int wave;
     public int Wave
     {
@@ -33,7 +32,7 @@ public class GameManagerBehaviour : MonoBehaviour
             {
                 for (int i = 0; i < nextWaveLabels.Length; i++)
                 {
-                    nextWaveLabels[i].GetComponent<Animator>().SetTrigger("nextWave");
+                    nextWaveLabels[i].GetComponent<Animator>().SetTrigger("nextWave"); //updates the wave text 
                 }
             }
             waveLabel.text = "WAVE: " + (wave + 1);
@@ -42,7 +41,6 @@ public class GameManagerBehaviour : MonoBehaviour
 
     public Text healthLabel;
     public GameObject[] healthIndicator;
-
     private int health;
     public int Health
     {
@@ -54,7 +52,7 @@ public class GameManagerBehaviour : MonoBehaviour
             
             health = value;
             healthLabel.text = "HEALTH: " + health;
-
+            //once health is below 0 game will start from begining 
             if (health <= 0 && !gameOver)
             {
             gameOver = true;

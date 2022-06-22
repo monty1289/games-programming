@@ -15,6 +15,6 @@ public class Rotate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(rotationSpeed * Time.deltaTime);
+        transform.Rotate(rotationSpeed * Time.deltaTime); // rotation speed of hay when shot
     }
 }

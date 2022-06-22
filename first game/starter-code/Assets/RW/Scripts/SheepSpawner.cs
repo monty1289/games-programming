@@ -24,19 +24,15 @@ public class SheepSpawner : MonoBehaviour
     {
         
     }
-
+    //sets sheep spawn positions
     private void SpawnSheep()
-    {
-        //int maxSpawnPoints = sheepSpawnPositions.Count;
-        //int randomNum = Random.Range(0, maxSpawnPoints);
-        //Transform randomSpawnPoint = sheepSpawnPositions[randomNum];
-        //Vector3 randomPosition = randomSpawnPoint.position;
+    {        
         Vector3 randomPosition = sheepSpawnPositions[Random.Range(0, sheepSpawnPositions.Count)].position;
         GameObject sheep = Instantiate(sheepPrefab, randomPosition, sheepPrefab.transform.rotation);
         sheepList.Add(sheep);
         sheep.GetComponent<Sheep>().SetSpawner(this);
     }
-
+    //Sets time between spawns
     private IEnumerator SpawnRoutine()
     {
         while (canSpawn)
@@ -44,18 +40,18 @@ public class SheepSpawner : MonoBehaviour
             SpawnSheep();
 
             if(timeBetweenSpawns > 1){
-            timeBetweenSpawns -= 10f * Time.deltaTime;
+            timeBetweenSpawns -= 10f * Time.deltaTime; //decreases time between spawns of a sheep too increace difficalty 
 
             }
             yield return new WaitForSeconds(timeBetweenSpawns);
         }
     }
-
+    //removes sheep from game list for better proformance 
     public void RemoveSheepFromList(GameObject sheep)
     {
         sheepList.Remove(sheep);
     }
-
+    //clears all sheep away when games finishes 
     public void DestroyAllSheep()
     {
         foreach (GameObject sheep in sheepList)

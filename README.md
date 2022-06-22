@@ -1,6 +1,8 @@
 # Games programing resoures
 
-URL's for all resoures used to comlete asignment tasks
+The objective of games programing paper is to create 4 game, each made to teach a different skill set. 
+
+### URL's for all resoures used to comlete asignment tasks
 
 ## Game 1
 
@@ -24,4 +26,10 @@ https://www.youtube.com/watch?v=vZU51tbgMXk
 
 ## Game 3
 
+monster collides with you (never got working)
+```
+https://www.youtube.com/watch?v=m0fjrQkaES4
+```
+
 ## Game 4
+N/A

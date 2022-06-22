@@ -1,3 +1,5 @@
+//moves the enemys along the path with rotation at corners and to get to the cookie
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

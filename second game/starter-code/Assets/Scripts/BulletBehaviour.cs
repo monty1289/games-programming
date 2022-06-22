@@ -1,3 +1,7 @@
+/* 
+sets speed and the damage a bullet will do to an enemys helth bar
+*/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

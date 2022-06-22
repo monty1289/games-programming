@@ -1,3 +1,5 @@
+//lets user to place defening charictors to stop enemys from getting to cookie
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,7 +20,7 @@ public class PlaceMonster : MonoBehaviour
     {
         
     }
-
+    
     private bool CanPlaceMonster()
     {
         int cost = monsterPrefab.GetComponent<MonsterData>().levels[0].cost;
@@ -38,7 +40,7 @@ public class PlaceMonster : MonoBehaviour
         }
         return false;
     }
-
+    
     void OnMouseUp()
     {
         if (CanPlaceMonster())

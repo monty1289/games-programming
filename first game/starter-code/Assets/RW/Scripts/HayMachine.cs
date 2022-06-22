@@ -1,3 +1,7 @@
+/* 
+    creates the haymachine that alows ht euser to interact with the game
+*/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -47,7 +51,7 @@ public class HayMachine : MonoBehaviour
         UpdateMovement();
         UpdateShooting();
     }
-
+    //method lets haymachine move from left and right with out moving past boundarys
     private void UpdateMovement()
     {
         float horizontalInput = Input.GetAxisRaw("Horizontal"); 
@@ -61,13 +65,13 @@ public class HayMachine : MonoBehaviour
             transform.Translate(transform.right * movementSpeed * Time.deltaTime);
         }
     }
-
+    //creates hay refab when called
     private void ShootHay()
     {
         Instantiate(hayBalePrefab, haySpawnpoint.position, Quaternion.identity);
         SoundManager.Instance.PlayShootClip();
     }
-
+    //shots from hay haymachine when space bar pressed
     private void UpdateShooting()
     {
         shootTimer -= Time.deltaTime;

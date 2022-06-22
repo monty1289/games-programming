@@ -1,3 +1,5 @@
+//controlls the amount of enemys spawned in each wave from start position 
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

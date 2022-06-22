@@ -1,3 +1,8 @@
+/*
+ maze constructor creates a randomized map each time a new game is played,
+ number of rows and coloumns can be coustom in controller inspector.
+*/
+
 using UnityEngine;
 
 public class MazeConstructor : MonoBehaviour
@@ -117,7 +122,7 @@ public class MazeConstructor : MonoBehaviour
 
         return maze;
     }
-
+    //method used when called to clear a way map to create new one
     public void DisposeOldMaze()
     {
         GameObject[] objects = GameObject.FindGameObjectsWithTag("Generated");
@@ -125,7 +130,7 @@ public class MazeConstructor : MonoBehaviour
             Destroy(go);
         }
     }
-
+    //goal placed created and placed at opisite end of map
     private void PlaceGoal(TriggerEventHandler treasureCallback)
     {            
         GameObject treasure = GameObject.CreatePrimitive(PrimitiveType.Cube);

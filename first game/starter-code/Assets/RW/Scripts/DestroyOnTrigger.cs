@@ -1,3 +1,7 @@
+/* 
+trigger created to destroy hay when moving of map
+*/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

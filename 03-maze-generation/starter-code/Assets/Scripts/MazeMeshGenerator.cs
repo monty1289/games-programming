@@ -89,7 +89,7 @@ public class MazeMeshGenerator
     {
         int index = newVertices.Count;
 
-        Vector3 vert1 = new Vector3(-.5f, -.5f, 0);
+        Vector3 vert1 = new Vector3(-.5f, -.5f, 0);  //fining player start position
         Vector3 vert2 = new Vector3(-.5f, .5f, 0);
         Vector3 vert3 = new Vector3(.5f, .5f, 0);
         Vector3 vert4 = new Vector3(.5f, -.5f, 0);

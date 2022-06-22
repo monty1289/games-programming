@@ -1,3 +1,5 @@
+//calls bullet prefab from each monster when enemy is in range 
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

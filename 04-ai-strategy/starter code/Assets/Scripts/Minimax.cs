@@ -138,7 +138,7 @@ public class Minimax : MonoBehaviour
         maxDepth = 3;
         CalculateMinMax(maxDepth, int.MinValue, int.MaxValue, true);
 
-        Debug.Log(Count);
+        Debug.Log(Count); //displays in console how many times the algorithm checked a node
         return bestMove;
     } 
 
@@ -188,7 +188,7 @@ public class Minimax : MonoBehaviour
                 moveStack.Push(move);
 
                 DoFakeMove(move.firstPosition, move.secondPosition);
-                int score = CalculateMinMax(depth - 1, alpha, beta, true);
+                int score = CalculateMinMax(depth - 1, alpha, beta, true);  
                 UndoFakeMove();
 
                 if (score < beta)                

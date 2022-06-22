@@ -1,3 +1,7 @@
+/*
+The Ai contorller movies the scary man around the map seeking out the player,
+I have use a pathfinding algorithom that traces from a start node to an end node.
+*/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
